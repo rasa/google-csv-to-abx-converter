@@ -11,15 +11,31 @@ Convert Google contact export to ABX format.
 	git clone git@github.com:rasa/google-csv-to-abx-converter
 	````
 
-3. Visit https://mail.google.com/mail/u/0/#contacts
+3. Visit https://takeout.google.com/
 
-4. Export your Google Contacts in "Google CSV format". Save the file with the .csv extension in the `google-csv-to-abx-converter` directory.
+4. Click [Deselect All]
 
-5. Run:
+5. Check [Contacts]
+
+6. Click [vCard Format]
+
+7. Select [CSV]
+
+8. Click [OK]
+
+9. Scroll down and click [Next Step]
+
+10. Click [Create archive]
+
+11. Unzip the archive into the google-csv-to-abx-converter folder
+
+12. Run:
 	````bash
 	$ cd google-csv-to-abx-converter
-	$ make
+	$ python google-contacts-to-abx.py takeout-20190328T195144Z-001
 	````
+
+13. The file `takeout-20190328T195144Z-001/Takeout/Contacts/All Contacts/All Contacts.abx` will be generated containing all contacts that have an address
 
 ## Contributing
 
